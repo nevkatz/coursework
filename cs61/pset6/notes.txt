@@ -1,0 +1,51 @@
+
+
+I have a global variable on connection_down which is supposed to indicate whether the server is down. If it happens within the while loop, it causes the server to be overwhelmed with requests. If it happens after the receive_body call, it causes the game to just stop. 
+
+Currently I wait until starting a new thread until I am below 30 and the connection is back up. I think I need to make sure there are no re-attempts in progress. 
+
+Do the illegal requests take place from within the "while" loop? 
+
+I think the new thread spun off has to wait until the previous thread has completed so it can go sequentially. 
+
+****
+Ok, so no I'm going to only spin off a new thread if number of requests is equal to 0. 
+
+This doesn't work because the active new threads can still bombard the server. 
+
+What to do with the active new threads once the server goes down? 
+
+They have to send their requests in sequence and not overwhelm the server. 
+
+Even enlarging the constants - doubling the lag time and doubling the max - doesn't work - I still see black spots and it still crashes. 
+
+There is a chance that the server could still be down, when a new thread is spun off. 
+
+How about we wait until the server is back up before spinning off a new thread.
+
+***
+
+Here we will wait until the connection is back up before spinning off a new thread. 
+
+We may also need to limit the # of requests by lengthening the constant.... 
+
+***
+PHASE 3
+
+Ok, so it looks like I need to traverse the list and free the thread. time to bring back to the old doubly linked list, I believe.....
+
+***
+
+Linked list seems to be working - BUT it looks like I pop something off the list every time I close a connection. Is this necessary? 
+
+
+
+
+How do you know to break out of the loop if you can't send another request??
+
+
+
+
+
+
+

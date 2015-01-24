@@ -1,0 +1,24 @@
+ 
+ * Which looks more expandable - 1D or 3D version? 
+
+ * Do we need to have our pipe logic in run_list? 
+ * What does it mean to start a pipeline in parallel? Is it required?
+ 
+ 
+   // create pipe array, which holds two file descriptors. 
+   // ***take stdout and make it the stdin of the second command
+   // loop over everything in command group list
+   // each group has its own pipefd in its struct. 
+   // split pipes between processes.  
+   
+   
+      // Install interrupt handler
+     //  if (signal(SIGINT, handler) == SIG_ERR)
+     //     unix_error("signal error");
+     
+     /*
+void handler (int sig) 
+{
+  printf("caught sigint");
+  exit(0);
+}*/

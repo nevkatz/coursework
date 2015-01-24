@@ -1,0 +1,21 @@
+IDEA for a seekable write cache: 
+
+We seek to the spot on the write file
+
+We write the data into the cache with a specific position.
+
+Perhaps the data block is a struct with a position attached to it. 
+
+Data blocks are placed into  
+
+PROBLEM! If cache is incomplete, data blocks could be sorted in the wrong order. 
+
+Get numblocks. 
+
+Blocks are sorted into tiers. 
+
+if first tier is full, write 1!
+if second tier is full and first tier is done, write 2!
+if first & second are done and third is done, write!
+
+

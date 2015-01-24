@@ -1,0 +1,20 @@
+Questions: 
+
+purpose of virtual memory map in process_setup. 
+
+Why we are copying a pagetable. 
+
+/*
+
+NOTES: 
+  A version of copy page table that copies its input page table will be useful. 
+  In the short term, we only need to copy the kernel version. 
+  I thought of this function as copying both levels at once. 
+  The level 1 page table is not really a copy at all!
+  These page tables need to be distinct. 
+  Allocating a level 1 page level. 
+  Set the it to point, THEN copy the mappings from kernel's L2 table into the !!
+  PTE_ADDL will mask out everything but the address. 
+  Cast that to a pointer
+  
+*/

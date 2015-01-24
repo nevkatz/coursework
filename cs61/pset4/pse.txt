@@ -1,0 +1,137 @@
+  PID TTY          TIME CMD
+    1 ?        00:00:02 systemd
+    2 ?        00:00:00 kthreadd
+    3 ?        00:00:01 ksoftirqd/0
+    5 ?        00:00:00 kworker/0:0H
+    7 ?        00:00:00 migration/0
+    8 ?        00:00:00 rcu_bh
+    9 ?        00:00:00 rcu_sched
+   10 ?        00:00:00 watchdog/0
+   11 ?        00:00:00 khelper
+   12 ?        00:00:00 kdevtmpfs
+   13 ?        00:00:00 netns
+   14 ?        00:00:00 writeback
+   15 ?        00:00:00 kintegrityd
+   16 ?        00:00:00 bioset
+   17 ?        00:00:00 kblockd
+   18 ?        00:00:00 xenbus_frontend
+   19 ?        00:00:00 ata_sff
+   20 ?        00:00:00 khubd
+   21 ?        00:00:00 md
+   24 ?        00:00:02 kswapd0
+   25 ?        00:00:00 ksmd
+   26 ?        00:00:00 fsnotify_mark
+   27 ?        00:00:00 crypto
+   35 ?        00:00:00 kthrotld
+   37 ?        00:00:00 scsi_eh_0
+   38 ?        00:00:00 scsi_eh_1
+   40 ?        00:00:00 kpsmoused
+   41 ?        00:00:00 deferwq
+   48 ?        00:00:00 kauditd
+  158 ?        00:00:00 kworker/0:1H
+  171 ?        00:00:00 mpt_poll_0
+  172 ?        00:00:00 mpt/0
+  177 ?        00:00:00 scsi_eh_2
+  223 ?        00:00:00 kdmflush
+  224 ?        00:00:00 bioset
+  227 ?        00:00:00 kdmflush
+  228 ?        00:00:00 bioset
+  243 ?        00:00:01 jbd2/dm-1-8
+  244 ?        00:00:00 ext4-dio-unwrit
+  284 ?        00:00:01 systemd-journal
+  302 ?        00:00:00 rpciod
+  316 ?        00:00:00 lvmetad
+  321 ?        00:00:00 systemd-udevd
+  375 ?        00:00:00 jbd2/sda1-8
+  376 ?        00:00:00 ext4-dio-unwrit
+  386 ?        00:00:00 alsactl
+  415 ?        00:00:00 systemd-logind
+  416 ?        00:00:00 rtkit-daemon
+  417 ?        00:00:01 accounts-daemon
+  423 ?        00:00:00 chronyd
+  424 ?        00:00:00 acpid
+  428 ?        00:00:00 rsyslogd
+  429 ?        00:00:00 dbus-daemon
+  433 ?        00:00:00 mcelog
+  436 ?        00:00:00 atd
+  437 ?        00:00:00 crond
+  466 ?        00:00:00 lightdm
+  484 ?        00:00:00 polkitd
+  488 tty1     00:06:07 X
+  665 ?        00:00:00 lightdm
+  669 ?        00:00:00 sh
+  679 ?        00:00:00 dbus-launch
+  680 ?        00:00:00 dbus-daemon
+  742 ?        00:00:00 imsettings-daem
+  745 ?        00:00:00 gvfsd
+  752 ?        00:00:00 xfconfd
+  800 ?        00:00:00 ssh-agent
+  826 ?        00:00:01 xfce4-session
+  828 ?        00:00:00 at-spi-bus-laun
+  832 ?        00:00:00 dbus-daemon
+  837 ?        00:00:00 at-spi2-registr
+  841 ?        00:00:01 gpg-agent
+  842 ?        00:00:08 xfwm4
+  845 ?        00:00:14 xfce4-panel
+  846 ?        00:00:00 xfsettingsd
+  847 ?        00:00:02 xfdesktop
+  856 ?        00:00:14 panel-10-genmon
+  858 ?        00:00:13 panel-12-genmon
+  859 ?        00:00:00 panel-14-systra
+  860 ?        00:00:00 panel-15-action
+  862 ?        00:00:00 blueman-applet
+  875 ?        00:00:00 polkit-gnome-au
+  877 ?        00:00:00 gvfs-udisks2-vo
+  887 ?        00:00:00 udisksd
+  950 ?        00:00:00 applet.py
+  979 ?        00:00:00 gvfsd-trash
+  982 ?        00:00:00 dhclient
+ 1005 ?        00:05:30 chrome
+ 1030 ?        00:00:01 upowerd
+ 1031 ?        00:00:00 pulseaudio
+ 1098 ?        00:00:01 chrome
+ 1100 ?        00:00:00 chrome-sandbox
+ 1118 ?        00:00:00 gconfd-2
+ 1121 ?        00:00:00 chrome
+ 1148 ?        00:00:00 nacl_helper_boo
+ 1152 ?        00:00:00 cupsd
+ 1158 ?        00:00:00 chrome
+ 1169 ?        00:00:00 dconf-service
+ 1225 ?        00:00:00 dhclient
+ 1283 ?        00:00:02 httpd
+ 1302 ?        00:00:00 sshd
+ 1308 ?        00:00:00 rpcbind
+ 1337 ?        00:00:13 teamviewerd
+ 1341 ?        00:00:00 mysqld_safe
+ 1344 ?        00:00:00 rpc.statd
+ 1429 ?        00:00:00 smbd
+ 1525 ?        00:00:00 httpd
+ 1527 ?        00:00:00 httpd
+ 1528 ?        00:00:00 httpd
+ 1529 ?        00:00:00 httpd
+ 1530 ?        00:00:00 httpd
+ 1570 ?        00:00:00 smbd
+ 1621 ?        00:00:44 mysqld
+ 1738 ?        00:00:00 wineserver
+ 4011 ?        00:00:00 gnome-keyring-d
+ 5105 ?        00:00:00 chrome
+15497 ?        00:00:00 gedit
+15498 ?        00:01:18 gedit
+15506 ?        00:00:00 gnome-pty-helpe
+15507 pts/0    00:00:00 bash
+15558 ?        00:00:00 kworker/u2:1
+17153 ?        00:00:00 kworker/0:0
+17214 pts/0    00:00:00 make
+17250 pts/0    00:00:00 sh
+17252 pts/0    00:00:05 qemu-system-i38
+18216 ?        00:00:00 kworker/0:1
+18298 ?        00:00:09 chrome
+18877 ?        00:00:00 kworker/0:2
+19399 pts/0    00:00:00 ps
+23756 ?        00:00:00 gvfsd-metadata
+29287 ?        00:00:02 xfce4-terminal
+29290 ?        00:00:00 gnome-pty-helpe
+29291 pts/1    00:00:00 bash
+29450 ?        00:01:29 chrome
+29571 ?        00:00:00 kworker/u2:0
+30085 ?        00:00:43 chrome

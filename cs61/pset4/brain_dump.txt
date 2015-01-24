@@ -1,0 +1,94 @@
+ Looks like each process has two segments: Read-only and Not-read-only. 
+ 
+ TO USE: 
+  /*    if (pageinfo[PAGENUMBER(parent_pe)].refcount > 0
+                      && pageinfo[PAGENUMBER(parent_pe)].owner > 0)
+                        pageinfo[PAGENUMBER(parent_pe)].refcount++;*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*
+                         * Iterate through virtual memory.
+                         * do the v-lookup
+                         * get another page, like I'm doing
+                         * call virtual_memory_map
+                         * that will make the mapping for you
+                         * map up the physical page to virtual address
+                         * 
+                         * set the pagetable just given to child
+                         * use VA from parent as VA for child
+                         * WIRE IT UP WITH VIRTUAL_MEMORY_MAP
+                         *  
+                         *
+                         *
+                         */
+
+***
+Ok, so I'm at the point in Step 5 Fork where I've done the following: 
+
+-Found a free process
+
+-Established & memset a child Level 1 table, assign it to the process
+
+-Established a parent level 2 pagetable from current process. 
+
+-Create a child 2 pagetable
+
+-Copied all data from parent level 2 page table (4096 bytes!) 
+
+...Now I'm at the point where I want to look for all the virtual addresses in my level 2 table, check if they're writeable, and if so, give them a new physical address. My questions are: 
+
+1. How many addresses should I expect to iterate over? 
+
+2. How would I obtain the address? Would I iterate through all page entries and get it somehow from a page entry? I was thinking PT_ADDR but that gives you physical addresses, correct? 
+
+3. I assume after I obtain the address, I need to check if it's writeable and NOT part of the kernel. I am thinking of making sure the product of &'ing it with PTE_U and PTE_W is above zero, that will be sufficient. Correct? 
+
+4. I then think I'd need to use virtual_memory_lookup as an initial step to assigning my virtual address a new physical address... correct me if I'm wrong. 
+
+Thanks!
+
+***
+
+Lots of helper functions. PLEASE FORGIVE!!!!!  My training from CS51!!!!
+
+
+STEP 1: ERASE USELESS CODE.
+
+STEP 2: REVISE COPY_DATA & CHECK. 
+
+
+For Step 5: 
+
+Try using a "for" loop. 
+
+We are not looping through the L1 pagetable. 
+
+The only looping we are doing is for finding a new process. 
+
+We do not need to memcopy pagetable 1. We just need to find a new pagetable 1. 
+
+We are making a new level 2 pagetable and copying in ALL the data. 
+
+Now that we have a nicely copied level 2 pagetable, we are checking every byte in there. 
+
+**Still not sure how to increment, but I think it's in 4-byte entries. 
+
+If something is writeable, we nseed to keep the same virtual address but set a new PHYSICAL address. 
+
+I think this happens with virtual memory lookup. 
+
+Then we need to set the process as runnable. 
+
+   // I'm assuming that each byte could be a potential link to a new L2 pagetable.
+   // easier way: think in terms of virtuals: 
+   // increment virtuals
+   // virtual_memory_lookup - parent table
+   // the pages that are writeable, make actual copies of. 
+

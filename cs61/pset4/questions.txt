@@ -1,0 +1,19 @@
+
+IN FORK: 
+
+ 1) How to increment loop when going through L2 pagetables? 
+
+ 2) Related: how big is an entry?  (1 byte?) 
+
+ 3) Is & PTE_P the right way to check that our app page is writable? 
+
+Am I mapping addresses properly? 
+What is the purpose of VM Lookup and what should I do with the result? 
+
+Are the processes in process_setup needed in the fork step?
+
+Why would my physical page address be out of bounds?  
+
+Where should I return -1? 
+
+where to set R & W permissions to zero? 

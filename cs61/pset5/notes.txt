@@ -1,0 +1,37 @@
+// struct command_group
+   // a 3D matrix of commands! 
+   // a list of command lists! used for pipes. 
+   // we will have multiple pipes in a list of commands - so how about this: 
+   
+   
+   // plan: after reading the line is done, 
+   // if piped = true or the head's next isn't null, 
+   // call the pipe function. 
+   // this will be a while statement that iterates over all the groups until its done. 
+   // couldn't we run a capture_output function that read from the STDIN? 
+   // yes, we should pass the whole command list into the pipe function...
+   // that will give us the output...
+   // then 
+   
+   
+      // pipe logic
+     // fork a child that will write to STDOUT. 
+     // call execvp using the current list. 
+     
+     // begin a loop here. 
+     // fork another child that will read from STDIN. 
+     // if not at end of list (next!=NULL)
+     // call dup2! and write to STDOUT, then loop back. 
+     // if at end of list (next==NULL), close pipe and execute normally. 
+     
+     
+       // we need all of this two happen in one function
+   // which makes me think we need to pass in a big group of piped commands.  
+   // and also have a while statement once that big group is passed in. 
+   // the output of the last statement needs to be the input of the first one. 
+   
+   // so we need the equivalent to a while loop 
+   // that just keeps running the lists - 
+   // except that if this does run the list, 
+   // they needed to be printed to stdout. 
+   // 

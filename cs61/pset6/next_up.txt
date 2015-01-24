@@ -1,0 +1,11 @@
+
+1) Add the linked list struct
+
+2) Add the linked list functions (push, traverse & pop, recycle) 
+
+3) Add a connection to the list when done
+
+4) Recycle a connection if possible
+
+
+
