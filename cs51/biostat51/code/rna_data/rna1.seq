@@ -1,0 +1,8 @@
+AUCGAUCGUAUAUAUGUAUAAUUUGGCCCC
+Exactly the same as rna_query1.seq
+AUCGAUCGUAUAUA
+Half the sequence of rna_query1.seq
+UACGAUGCUAUAUAUGUAUUUUUUGGCCCC
+Similar to query rna_query1.seq with substitutions
+AUCGAUCGUAUAUAUGUAUAAUUUGGCCCCUUUUUUUUUUUUAUCGAUCGUAUAUAUGUAUAAUUUGGCCCCAAAAAAAAAAAAAAAAUCGAUCGUAUAUAUGUAU
+Two repeated instances of rna_query1.seq and one partial instance.

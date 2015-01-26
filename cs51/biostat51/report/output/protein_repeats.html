@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+<title>Sequence Alignment Output</title>
+<link rel='stylesheet' href='../css/biostat.css' type='text/css'>
+</head><body><h1>Sequence Output</h1><p><strong>Query Sequence Info</strong>: This is a sample sequence from the algorithm book we referenced in our write-up. (p. 25).</p>
+
+           <p><strong>Alignment Type:</strong> repeats</p>
+
+           <p><strong>Max Hits:</strong> 10 <strong>Threshold:</strong> 0<p>
+<p>---------</p>
+ 
+<p> <span class='score'>score: </span>123</p>
+
+<p class='query'><span> PAWHEAE.-----PAWHEAE.-------PAWHEAE.-----PAWHEAE. - query sequence</span></p> 
+ 
+<p class='test'><span>PAWHEAEVVVVVVPAWHEAEFFFFFFFFPAWHEEEVVVVVVPPWHEEEE - test sequence</span></p> 
+
+<p class='comment'><span> This is a larger sequence that contains multiple occurrences of the protein1.seq sequence and variants thereof. </span></p> 
+
+<p>---------</p>
+ 
+<p> <span class='score'>score: </span>40</p>
+
+<p class='query'><span> PAW.---PAW.-----PAW.---PAW - query sequence</span></p> 
+ 
+<p class='test'><span>PAWVVVVPAWVVVVVSPAWSSSSPAW - test sequence</span></p> 
+
+<p class='comment'><span> This is a moderate sequence containing multiple occurrences of a query sequence fragment. </span></p> 
+
+<p>---------</p>
+ 
+<p> <span class='score'>score: </span>9</p>
+
+<p class='query'><span> HEA.AW-HE. - query sequence</span></p> 
+ 
+<p class='test'><span>HEAGAWGHEE - test sequence</span></p> 
+
+<p class='comment'><span> This is the sample protein pair from the algorithm book we referenced in our write-up.  We achieved the same result in our protein tests. The local alignment looks slightly different because in our local algorithm, we display the whole test sequence. </span></p> 
+</body></html>

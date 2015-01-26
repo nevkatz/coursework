@@ -1,0 +1,2 @@
+HEAGAWGHEE
+This is the sample protein pair from the algorithm book we referenced in our write-up.  We achieved the same result in our protein tests. The local alignment looks slightly different because in our local algorithm, we display the whole test sequence.

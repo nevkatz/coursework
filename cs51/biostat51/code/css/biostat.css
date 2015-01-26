@@ -1,0 +1,23 @@
+h1 {
+  font-size: 20px;
+}
+
+
+.query, .test {
+  font-family: "Courier New", Courier, monospace
+}
+.query {
+  color:#0070C0;
+}
+
+.score { 
+  font-weight: bold;
+} 
+.test {
+  color:#8064A2;
+}
+
+.comment {
+ color:#00B050;
+ font-style: italic;
+}
