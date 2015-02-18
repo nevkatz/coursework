@@ -25,7 +25,7 @@ my($TRIALS) = exists($ENV{"TRIALS"}) ? int($ENV{"TRIALS"}) : 5;
 $TRIALS = 5 if $TRIALS <= 0;
 my($STDIOTRIALS) = exists($ENV{"STDIOTRIALS"}) ? int($ENV{"STDIOTRIALS"}) : $TRIALS;
 $STDIOTRIALS = $TRIALS if $STDIOTRIALS <= 0;
-my($MAXTIME) = exists($ENV{"MAXTIME"}) ? $ENV{"MAXTIME"} + 0 : 20;
+my($MAXTIME) = exists($ENV{"MAXTIME"}) ? $ENV{"MAXTIME"} + 0 : 30;
 $MAXTIME = 20 if $MAXTIME <= 0;
 sub first (@) { return $_[0]; }
 my($CHECKSUM) = first(grep {-x $_} ("/usr/bin/md5sum", "/sbin/md5",
