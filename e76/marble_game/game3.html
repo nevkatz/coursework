@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<link rel="apple-touch-icon" href="images/standard.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="images/ipad.png"/>
+<link rel="apple-touch-icon" sizes="114x114" href="images/retina.png"/>
+
+<link rel="stylesheet" href="css/marble66.css"/>
+<title>Marble Game</title>
+</head>
+<body>
+<div id="game_screen">
+  <div id="stats">
+    <div id="score" class="stat">Score: 40</div>
+    <div id="level" class="stat">Level: 1</div>
+    <div id="time" class="stat">Time: 0:00</div>
+    <div id="health" class="stat">Health: 5</div>
+    <div id="lives" class="stat">Lives: 3</div>
+  </div>
+  <canvas id="myCanvas"></canvas>
+  <canvas id="myCanvasMarble"></canvas>
+  <div id="nav">
+    <div id="pauseButton" class="controls"><span class="label">Pause</span></div>
+    <div id="calibrate" class="controls"><span class="label">Calibrate</span></div>
+    <div id="quit" class="controls"><span class="label">Quit</span></div>
+    <div id="scores" class="controls"><span class="label">Scores</span></div>
+  </div>
+  <div id="gamePaused">Game Paused</div>
+</div>
+<div id="level_complete" class="nongame">
+	<div id="complete">Level Complete</div>
+</div>
+<div id="menu_screen" class="nongame">
+  <div id="message"></div>
+</div>
+
+<div id="game_over" class="nongame">
+  <h2>Game Over</h2>
+  <div id="end_stats">
+    <ul id="stat_list">
+      <li id="endscore">Score:</li>
+      <li id="endtime">Time: </li>
+      <li id="endlevel">Level: </li>
+    </ul>
+  </div>
+  <div id="go_links">
+    <div id="go_scores">High Scores</div>
+    <div id="go_new">New Game</div>
+    <div id="go_quit">Quit</div>
+  </div>
+</div>
+
+<!-- 115 works --> 
+<script type="text/javascript" src="js/marble207.js"></script>
+</body>
+</html>
+

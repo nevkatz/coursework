@@ -1,0 +1,458 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	font-family: Verdana, Geneva, sans-serif;
+}
+#game_screen {
+	width: 100%;
+	height: 100%;
+}
+/*
+ *  Headers
+ */
+ 
+ /*game title screen*/
+h1, h2 {
+	color: #39F;
+}
+/*scores */
+
+h2 {
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+#message {
+	position: relative;
+	top: 30%;
+	width: 60%;
+	text-align: center;
+	/*border: 2px solid red;*/
+	left: 2%;
+	font-size: 25px;
+}
+#complete {
+	position: relative;
+	top: 50%;
+	width: 100%;
+	margin: 0px auto;
+	text-align: center;
+}
+/*
+ * Canvases
+ */
+
+/*Environment*/
+
+
+#myCanvas {
+	border: 1px solid #9c9898;
+	background-color: #7596d8;
+	position: absolute;
+	top: 22px;
+	z-index: 1;
+}
+/*Marble*/
+#myCanvasMarble {
+	position: absolute;
+	top: 22px;
+	z-index: 2;
+}
+/* Game screen starts off as invisible*/
+#game_screen {
+	visibility: inherit;
+}
+/* Pause Button*/
+
+#nav {
+	z-index: 0;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	border: 1px solid grey;
+	top: 263px;
+}
+.controls {
+	width: 80px;
+	z-index: 20;
+	border-radius: 2px;
+	font-family: Verdana;
+	font-size: 14px;
+	color: rgba(51, 102, 204, 0.9);
+	text-align: center;
+	height: 40px;
+	float: left;
+	display: block;
+	line-height: 2.5em;
+}
+.controls .label {
+	position: relative;
+	top: -5px;
+}
+/*bottom buttons */
+.controls, #nav {
+	font-family: verdana, helvetica, sans-serif;
+	font-weight: normal;
+	text-align: center;
+	color: #666;
+	background-color: #f2f5f6;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f5f6), color-stop(100%, #c8d7dc));
+	background-image: -webkit-linear-gradient(top, #f2f5f6, #c8d7dc);
+	background-image: -moz-linear-gradient(top, #f2f5f6, #c8d7dc);
+	background-image: -ms-linear-gradient(top, #f2f5f6, #c8d7dc);
+	background-image: -o-linear-gradient(top, #f2f5f6, #c8d7dc);
+	background-image: linear-gradient(top, #f2f5f6, #c8d7dc);
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#f2f5f6, endColorstr=#c8d7dc);
+}
+.controls:hover {
+	border: 1px solid grey;
+	background-color: #d4dee1;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d4dee1), color-stop(100%, #a9c0c8));
+	background-image: -webkit-linear-gradient(top, #d4dee1, #a9c0c8);
+	background-image: -moz-linear-gradient(top, #d4dee1, #a9c0c8);
+	background-image: -ms-linear-gradient(top, #d4dee1, #a9c0c8);
+	background-image: -o-linear-gradient(top, #d4dee1, #a9c0c8);
+	background-image: linear-gradient(top, #d4dee1, #a9c0c8);
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d4dee1, endColorstr=#a9c0c8);
+}
+#pauseButton, #calibrate {
+	float: left;
+	border: 1px solid grey;
+	border-left: 0px;
+}
+#quit, #scores {
+	float: right;
+	border: 1px solid grey;
+	border-color: grey;
+	border-right: 0px;
+}
+/*Game Paused Message */
+#gamePaused {
+	position: absolute;
+	top: 40%;
+	left: 0px;
+	text-align: center;
+	width: 100%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 50px;
+	color: white;
+	z-index: 4;
+	font-weight: bold;
+	opacity: 0.85;
+	visibility: collapse;
+}
+#geoloc {
+	position: absolute;
+	text-align: center;
+	top: 20px;
+	left: 10px;
+	color: black;
+	z-index: 5;
+}
+/*game title screen*/
+.nongame {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 28px;
+}
+#level_complete, menu_screen, #game_over {
+	visibility: collapse;
+}
+#level_complete {
+	z-index: 0;
+}
+.nongame ul#links {
+	color: #FFC;
+	list-style-type: none;
+	padding-left: 0px;
+	margin-left: 0px;
+}
+.nongame ul li {
+	list-style-type: none;
+	display: block;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+#game_over {
+	visibility: collapse;
+}
+#game_stats {
+	border: 1px solid red;
+	width: 340px;
+}
+#stat_list li {
+	margin-bottom: 10px;
+}
+/*temp*/
+#menu_screen {
+	visibility: collapse;
+}
+#debug {
+	margin-left: 20px;
+}
+/*status bar at top of game screen*/
+#stats {
+	width: 100%;
+	display: block;
+	height: 22px;
+	background-color: black;
+}
+/*elements within status bar */
+
+.stat {
+	position: absolute;
+	top: 1px;
+	z-index: 10;
+	color: #98d5f4;
+}
+#score {
+	left: 2%;/*10px;*/
+}
+#level {
+	left: 25% /*px;*/
+}
+#time {
+	left: 43%;/*205px;*/
+}
+#health {
+	left: 66%; /*315px;*/
+}
+#lives {
+	left: 84%; /*405px;*/
+}
+/******/
+.orientleft #shell {
+	-webkit-transform: rotate(-90deg);
+	-webkit-transform-origin: 160px 160px;
+}
+.orientright #shell {
+	-webkit-transform: rotate(90deg);
+	-webkit-transform-origin: 230px 230px;
+}
+#highscores {
+	margin: 0px auto;
+	font-size: 16px;
+}
+#highscores tr:first-child td {
+	padding: 5px 10px 5px 10px;
+}
+#scorelinks, #go_links {
+	margin: 0px auto;
+	margin-top: 25px;
+	width: 420px;
+	font-size: 20px;
+	/*border: 2px solid red;*/
+	height: 20px;
+}
+#go_links {
+	width: 440px;
+	position: absolute;
+	font-size: 20px;
+	top: 240px;
+	left: 50px;
+}
+#scoremenu {
+	margin-left: 50px;
+}
+#scorenew, #scorequit, #scoremenu, #go_new, #go_quit, #go_scores {
+	float: left;
+	margin-right: 50px;
+}
+#end_stats ul {
+	font-size: 20px;
+	margin: 0px auto;
+}
+#stat_list {
+	margin: 0px auto;
+	/*border: 1px solid blue;*/
+	width: 130px;
+	text-align: left;
+	list-style: none;
+	padding-left: 0px;
+	font-size: 20px;
+}
+ @media screen and (min-device-width: 768px) {
+/*Marble*/
+#myCanvasMarble, #myCanvas {
+	top: 44px;
+}
+h2 {
+	font-size: 60px;
+	margin-bottom: 60px;
+}
+#nav {
+	width: 100%;
+	height: 80px;
+	top: 664px;
+}
+.controls {
+	width: 160px;
+	z-index: 20;
+	font-size: 28px;
+	vertical-align: middle;
+	text-align: center;
+	height: 80px;
+	line-height: 3.2em;
+}
+#gamePaused {
+	top: 260px;
+	left: 100px;
+	font-size: 90px;
+}
+/****/
+
+/*game title screen*/
+.nongame {
+	width: 100%;
+	height: 100%;
+	font-size: 56px;
+}
+/*status bar at top of game screen*/
+#stats {
+	width: 100%;
+	font-size: 30px;
+	height: 44px;
+}
+/*elements within status bar */
+
+.stat {
+	position: absolute;
+	top: 1px;
+	z-index: 10;
+	color: #98d5f4;
+}
+#score {
+	left: 2%; /*20px;*/
+}
+#level {
+	left: 22%; /*230px;*/
+}
+#time {
+	left: 40%; /*410px;*/
+}
+#health {
+	left: 65%; /*670px;*/
+}
+#lives {
+	left: 86; /*890px;*/
+}
+/******/
+
+#highscores {
+	margin: 0px auto;
+	font-size: 32px;
+}
+#highscores tr:first-child td {
+	padding: 10px 20px 10px 20px;
+}
+#scorelinks, #go_links {
+	margin: 0px auto;
+	margin-top: 50px;
+	width: 520px;
+	font-size: 30px;
+	height: 30px;
+	position: relative;
+	top: 120px;
+}
+#scoremenu {
+	margin-left: 50px;
+}
+#go_links {
+	width: 610px;
+	position: absolute;
+	font-size: 30px;
+	top: 480px;
+	left: 230px;
+}
+#go_scores {
+	padding-left: 40px;
+}
+#scorenew, #scorequit, #scoremenu, #go_new, #go_quit, #go_scores {
+	float: left;
+	margin-right: 50px;
+}
+#end_stats ul {
+	font-size: 40px;
+}
+#end_stats ul li {
+	margin-bottom: 20px;
+}
+#stat_list {
+	margin: 0px auto;
+	/*border: 1px solid blue;*/
+	text-align: left;
+	list-style: none;
+	width: 340px;
+	font-size: 40px;
+}
+#message {
+	top: 40%;
+	left: 2%;
+}
+}
+ 
+ /* iOS */
+ 
+ /*
+  *   iPad
+  */
+ 
+ @media only screen and (max-device-width: 1024) and (orientation: portrait) {
+
+#message {
+	left: 5%;
+}
+}
+
+
+/*
+ *  iPhone
+ */
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+ h1, {
+ font-size: 32px;
+}
+/*scores */
+
+h2 {
+	font-size: 30px;
+}
+
+	
+#scorelinks, #go_links {
+	position: relative;
+	top: 40px;
+	width: 300px;
+	font-size: 26px;
+	text-align: center;
+}
+#scoremenu {
+	margin: 0px auto;
+}
+#scorenew, #scorequit, #scoremenu, #go_new, #go_quit, #go_scores, #main_new, #main_scores, #main_quit {
+	float: none;
+	margin: 0px auto;
+	margin-bottom: 20px;
+}
+}
+ @media only screen and (max-device-width: 480px) and (orientation: landscape) {
+body, .nongame {
+	width: 100%;
+	height: 100%;
+}
+}
+
+/*
+position nav
+marble gradient
+coin gradients
+orientation
+iPhone-specific css
+*/
